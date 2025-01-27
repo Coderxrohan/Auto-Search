@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Search Extension",
+  "version": "1.0",
+  "description": "Automated search with custom dictionary and timing",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["default.csv"],
+    "matches": ["<all_urls>"]
+  }]
+} 
